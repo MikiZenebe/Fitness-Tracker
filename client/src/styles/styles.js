@@ -1,6 +1,4 @@
 import styled from "styled-components";
-import LogoImage from "../utils/Images/Logo.png";
-import AuthImage from "../utils/Images/AuthImage.png";
 
 export const AppContainer = styled.div({
   width: "100%",
@@ -22,15 +20,45 @@ export const AuthContainer = styled.div`
   }
 `;
 
+//Auth Page
 export const AuthLeft = styled.div`
   flex: 1;
-  background: blue;
+  position: relative;
   @media (max-width: 700px) {
     display: none;
   }
 `;
-
 export const AuthRight = styled.div({
   flex: "1",
-  background: "red",
+  position: "relative",
+  display: "flex",
+  flexDirection: "column",
+  padding: "40px",
+  gap: "16px",
+  alignItems: "center",
+  justifyContent: "center",
+});
+export const Logo = styled.img({
+  position: "absolute",
+  width: "70px",
+  top: "40px",
+  left: "60px",
+  zIndex: "10",
+});
+export const Image = styled.img({
+  position: "relative",
+  height: "100%",
+  width: "100%",
+  objectFit: "cover",
+});
+export const Text = styled.div({
+  fontSize: "15px",
+  textAlign: "center",
+  color: `${({ theme }) => theme.text_secondary}`,
+  marginTop: "16px",
+});
+export const TextButton = styled.span({
+  color: "#007AFF",
+  cursor: "pointer",
+  fontWeight: "bold",
 });
