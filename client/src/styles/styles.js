@@ -62,3 +62,25 @@ export const TextButton = styled.span({
   cursor: "pointer",
   fontWeight: "bold",
 });
+
+//SignUp
+export const SignUpContainer = styled.div({});
+
+//SignIn
+export const SignInContainer = styled.div({
+  width: "100%",
+  maxWidth: "500px",
+  display: "flex",
+  flexDirection: "column",
+  gap: "36px",
+});
+export const Title = styled.div({
+  fontSize: "30px",
+  fontWeight: "800",
+  color: "#404040",
+});
+export const Span = styled.div({
+  fontSize: "16px",
+  fontWeight: "400",
+  color: "#4d4c4c" + 90,
+});
