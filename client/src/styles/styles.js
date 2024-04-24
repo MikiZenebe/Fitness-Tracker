@@ -114,6 +114,7 @@ export const NavContainer = styled.div({
 export const Mobileicon = styled.div`
   color: ${({ theme }) => theme.text_primary};
   display: none;
+  cursor: pointer;
   @media screen and (max-width: 768px) {
     display: flex;
     align-items: center;
@@ -165,5 +166,24 @@ export const NavItems = styled.ul`
     display: none;
   }
 `;
-export const NavTextButton = styled.div({});
-export const UserContainer = styled.div({});
+export const NavTextButton = styled.div({
+  textAlign: "end",
+  color: "#5B86E5",
+  cursor: "pointer",
+  fontSize: "16px",
+  transition: "all 0.3s ease",
+  fontWeight: "600",
+  "&:hover": {
+    color: "#007AFF",
+  },
+});
+export const UserContainer = styled.div({
+  width: "100%",
+  height: "100%",
+  display: "flex",
+  justifyContent: "flex-end",
+  gap: "16px",
+  alignItems: "center",
+  padding: "0 6px",
+  color: "#007AFF",
+});
