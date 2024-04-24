@@ -15,6 +15,9 @@ export const AppContainer = styled.div({
 export const AuthContainer = styled.div`
   display: flex;
   background: #ffffff;
+  height: 100%;
+  display: flex;
+  background: ${({ theme }) => theme.bg};
   @media (max-width: 700px) {
     flex-direction: column;
   }
