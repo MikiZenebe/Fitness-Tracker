@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 
 export const AppContainer = styled.div({
   width: "100%",
@@ -66,10 +67,8 @@ export const TextButton = styled.span({
   fontWeight: "bold",
 });
 
-//SignUp
+//Sign
 export const SignUpContainer = styled.div({});
-
-//SignIn
 export const SignInContainer = styled.div({
   width: "100%",
   maxWidth: "500px",
@@ -87,3 +86,84 @@ export const Span = styled.div({
   fontWeight: "400",
   color: "#4d4c4c" + 90,
 });
+
+//Navbar
+export const Nav = styled.div({
+  backgroundColor: "#FFFFFF",
+  height: "80px",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  fontSize: "1rem",
+  position: "sticky",
+  top: "0",
+  zIndex: 10,
+  color: "white",
+  borderBottom: `1px solid ${"#4d4c4c" + 20}`,
+});
+export const NavContainer = styled.div({
+  width: "100%",
+  maxWidth: "1400px",
+  padding: "0 24px",
+  display: "flex",
+  gap: "14px",
+  alignItems: "center",
+  justifyContent: "space-between",
+  fontSize: "1rem",
+});
+export const Mobileicon = styled.div`
+  color: ${({ theme }) => theme.text_primary};
+  display: none;
+  @media screen and (max-width: 768px) {
+    display: flex;
+    align-items: center;
+  }
+`;
+export const NavLogo = styled.div({
+  width: "100%",
+  display: "flex",
+  alignItems: "center",
+  gap: "16px",
+  padding: "0 6px",
+  fontWeight: "600",
+  fontSize: "18px",
+  textDecoration: "none",
+  color: "black",
+});
+export const NavBLogo = styled.img({
+  height: "42px",
+});
+export const Navlink = styled(NavLink)({
+  display: "flex",
+  alignItems: "center",
+  color: "#404040",
+  fontWeight: "500",
+  cursor: "pointer",
+  transition: "all 1s slide-in",
+  textDecoration: "none",
+  "&:hover": {
+    color: "#007AFF",
+    textDecoration: "none",
+  },
+
+  "&.active": {
+    color: "#007AFF",
+    borderBottom: "1.8px solid #007AFF",
+    textDecoration: "none",
+  },
+});
+export const NavItems = styled.ul`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  padding: 0 6px;
+  list-style: none;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+`;
+export const NavTextButton = styled.div({});
+export const UserContainer = styled.div({});
