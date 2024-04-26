@@ -222,3 +222,82 @@ export const FlexWrap = styled.div`
     gap: 12px;
   }
 `;
+
+//Cards
+export const CountCard = styled.div`
+  flex: 1;
+  min-width: 200px;
+  padding: 24px;
+  display: flex;
+  gap: 6px;
+  border: 1px solid ${({ theme }) => theme.text_primary + 20};
+  border-radius: 14px;
+  box-shadow: 1px 6px 20px 0px ${({ theme }) => theme.primary + 15};
+`;
+export const CountLeft = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  @media (max-width: 600px) {
+    gap: 6px;
+  }
+`;
+export const CountTitle = styled.div`
+  font-weight: 600;
+  font-size: 16px;
+  color: ${({ theme }) => theme.primary};
+  @media (max-width: 600px) {
+    font-size: 14px;
+  }
+`;
+export const CountValue = styled.div`
+  font-weight: 600;
+  font-size: 32px;
+  display: flex;
+  align-items: end;
+  gap: 8px;
+  color: ${({ theme }) => theme.text_primary};
+  @media (max-width: 600px) {
+    font-size: 22px;
+  }
+`;
+export const CountIcon = styled.div`
+  height: fit-content;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  ${({ color, bg }) => `
+  background: ${bg};
+  color: ${color};
+  `}
+`;
+export const CountUnit = styled.div`
+  font-size: 14px;
+  margin-bottom: 8px;
+`;
+export const CountSpan = styled.div`
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  @media (max-width: 600px) {
+    font-size: 12px;
+  }
+
+  ${({ positive, theme }) =>
+    positive
+      ? `
+  color: ${theme.green};`
+      : `
+  color: ${theme.red};`}
+`;
+export const CountDesc = styled.div`
+  font-size: 14px;
+  color: ${({ theme }) => theme.text_secondary + 90};
+  margin-bottom: 6px;
+  @media (max-width: 600px) {
+    font-size: 12px;
+  }
+`;

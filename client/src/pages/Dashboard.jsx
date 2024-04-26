@@ -4,6 +4,8 @@ import {
   FlexWrap,
   Wrapper,
 } from "../styles/styles";
+import { counts } from "../utils/data";
+import CountsCard from "../components/cards/CountsCard";
 
 export default function Dashboard() {
   return (
@@ -11,9 +13,9 @@ export default function Dashboard() {
       <Wrapper>
         <DashboardTitle>Dashboard</DashboardTitle>
         <FlexWrap>
-          <div>Card</div>
-          <div>Card</div>
-          <div>Card</div>
+          {counts.map((item) => (
+            <CountsCard key={item} item={item} />
+          ))}
         </FlexWrap>
       </Wrapper>
     </DashboardContainer>
