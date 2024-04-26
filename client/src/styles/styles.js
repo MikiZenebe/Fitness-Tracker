@@ -186,3 +186,39 @@ export const UserContainer = styled.div({
   padding: "0 6px",
   color: "#007AFF",
 });
+
+//Dashboard
+export const DashboardContainer = styled.div({
+  flex: 1,
+  height: "100%",
+  display: "flex",
+  justifyContent: "center",
+  padding: "22px 0px",
+  overflowY: "scroll",
+});
+export const Wrapper = styled.div`
+  flex: 1;
+  max-width: 1400px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  @media (max-width: 600px) {
+    gap: 12px;
+  }
+`;
+export const DashboardTitle = styled.div({
+  padding: "0px 16px",
+  fontSize: "22px",
+  color: `${({ theme }) => theme.text_primary}`,
+  fontWeight: "500",
+});
+export const FlexWrap = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 22px;
+  padding: 0px 16px;
+  @media (max-width: 600px) {
+    gap: 12px;
+  }
+`;
