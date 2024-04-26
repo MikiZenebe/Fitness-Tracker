@@ -149,7 +149,6 @@ export const Navlink = styled(NavLink)({
 
   "&.active": {
     color: "#007AFF",
-    borderBottom: "1.8px solid #007AFF",
     textDecoration: "none",
   },
 });
