@@ -10,13 +10,13 @@ import {
   CountValue,
 } from "../../styles/styles";
 
-export default function CountsCard({ item }) {
+export default function CountsCard({ item, data }) {
   return (
     <CountCard>
       <CountLeft>
         <CountTitle>{item.name}</CountTitle>
         <CountValue>
-          1200
+          {data && data[item.key].toFixed(2)}
           <CountUnit>{item.unit}</CountUnit>
           <CountSpan positive>(+10%)</CountSpan>
         </CountValue>
