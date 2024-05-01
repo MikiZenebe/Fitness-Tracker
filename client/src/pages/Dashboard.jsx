@@ -1,15 +1,22 @@
 import {
+  CardWrapper,
   DashboardContainer,
   DashboardTitle,
   FlexWrap,
+  Section,
+  Title,
   Wrapper,
 } from "../styles/styles";
 import { counts } from "../utils/data";
 import CountsCard from "../components/cards/CountsCard";
 import WeeklyStat from "../components/cards/WeeklyStat";
 import CategoryChart from "../components/cards/CategoryChart";
+import AddWorkouts from "../components/AddWorkouts";
+import { useState } from "react";
+import WorkoutCard from "../components/cards/WorkoutCard";
 
 export default function Dashboard() {
+  const [workout, setWorkout] = useState("");
   const data = {
     totalCaloriesBurnt: 13500,
     totalWorkouts: 6,
@@ -55,7 +62,15 @@ export default function Dashboard() {
         <FlexWrap>
           <WeeklyStat key={data.id} data={data} />
           <CategoryChart key={data.id} data={data} />
+          <AddWorkouts workout={workout} setWorkout={setWorkout} />
         </FlexWrap>
+
+        <Section>
+          <Title>Today Workouts</Title>
+          <CardWrapper>
+            <WorkoutCard />
+          </CardWrapper>
+        </Section>
       </Wrapper>
     </DashboardContainer>
   );
