@@ -7,6 +7,7 @@ import {
 import { counts } from "../utils/data";
 import CountsCard from "../components/cards/CountsCard";
 import WeeklyStat from "../components/cards/WeeklyStat";
+import CategoryChart from "../components/cards/CategoryChart";
 
 export default function Dashboard() {
   const data = {
@@ -41,8 +42,6 @@ export default function Dashboard() {
     ],
   };
 
-  console.log(data);
-
   return (
     <DashboardContainer>
       <Wrapper>
@@ -55,6 +54,7 @@ export default function Dashboard() {
 
         <FlexWrap>
           <WeeklyStat key={data.id} data={data} />
+          <CategoryChart key={data.id} data={data} />
         </FlexWrap>
       </Wrapper>
     </DashboardContainer>
