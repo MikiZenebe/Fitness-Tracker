@@ -3,6 +3,7 @@ import * as dotenv from "dotenv";
 import cors from "cors";
 import mongoose from "mongoose";
 import UserRoutes from "./routes/UserRoutes.js";
+import WorkoutRoutes from "./routes/WorkoutRoutes.js";
 
 dotenv.config();
 
@@ -34,3 +35,4 @@ startServer();
 
 //Routes
 app.use("/api/user/", UserRoutes);
+app.use("/api/workout/", WorkoutRoutes);
