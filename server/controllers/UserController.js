@@ -34,7 +34,6 @@ export const UserRegister = async (req, res) => {
     return next(error);
   }
 };
-
 export const UserLogin = async (req, res, next) => {
   try {
     const { email, password } = req.body;
