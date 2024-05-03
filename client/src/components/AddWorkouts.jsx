@@ -3,7 +3,12 @@ import { WeeklyCard, WeeklyTitle } from "../styles/styles";
 import TextInput from "../components/TextInput";
 import Button from "../components/Button";
 
-export default function AddWorkouts({ workout, setWorkout }) {
+export default function AddWorkouts({
+  workout,
+  setWorkout,
+  addNewWorkout,
+  buttonLoading,
+}) {
   return (
     <WeeklyCard>
       <WeeklyTitle>Add New Workout</WeeklyTitle>
@@ -23,7 +28,13 @@ export default function AddWorkouts({ workout, setWorkout }) {
         handelChange={(e) => setWorkout(e.target.value)}
       />
 
-      <Button text="Add Workout" small />
+      <Button
+        text="Add Workout"
+        small
+        onClick={() => addNewWorkout()}
+        isLoading={buttonLoading}
+        isDisabled={buttonLoading}
+      />
     </WeeklyCard>
   );
 }

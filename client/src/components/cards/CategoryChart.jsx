@@ -6,7 +6,7 @@ export default function CategoryChart({ data }) {
   return (
     <WeeklyCard>
       <WeeklyTitle>Weekly Calories Burned</WeeklyTitle>
-      {data.pieChartData && (
+      {data?.pieChartData && (
         <PieChart
           series={[
             {

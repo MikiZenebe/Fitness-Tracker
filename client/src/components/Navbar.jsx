@@ -33,7 +33,7 @@ export default function Navbar({ currentUser }) {
           Fittrack
         </NavLogo>
 
-        <MobileMenu isOpen={isOpen}>
+        <MobileMenu isopen={isOpen}>
           <Navlink to="/">Dashboard</Navlink>
           <Navlink to="/workouts">Workouts</Navlink>
         </MobileMenu>

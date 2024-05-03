@@ -6,7 +6,7 @@ export default function WeeklyStat({ data }) {
   return (
     <WeeklyCard>
       <WeeklyTitle>Weekly Calories Burned</WeeklyTitle>
-      {data.totalWeeksCaloriesBurnt && (
+      {data?.totalWeeksCaloriesBurnt && (
         <BarChart
           xAxis={[
             { scaleType: "band", data: data?.totalWeeksCaloriesBurnt?.weeks },
