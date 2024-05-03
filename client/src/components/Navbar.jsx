@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 import {
   Mobileicon,
@@ -14,8 +15,11 @@ import { MenuRounded } from "@mui/icons-material";
 import LogoImage from "../utils/Images/Logo.png";
 import { Avatar } from "@mui/material";
 import styled from "styled-components";
+import { useDispatch } from "react-redux";
+import { logout } from "../redux/reducers/userSlice";
 
-export default function Navbar() {
+export default function Navbar({ currentUser }) {
+  const dispatch = useDispatch();
   const [isOpen, setisOpen] = useState(false);
 
   return (
@@ -40,8 +44,10 @@ export default function Navbar() {
         </NavItems>
 
         <UserContainer>
-          <Avatar src={""}></Avatar>
-          <NavTextButton>Logout</NavTextButton>
+          <Avatar src={currentUser?.img}>{currentUser?.name[0]}</Avatar>
+          <NavTextButton onClick={() => dispatch(logout())}>
+            Logout
+          </NavTextButton>
         </UserContainer>
       </NavContainer>
     </Nav>
