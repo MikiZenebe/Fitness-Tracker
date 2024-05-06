@@ -1,7 +1,7 @@
 import User from "../models/User.js";
 import Workout from "../models/Workout.js";
 
-export const getUserDashboard = async (req, res) => {
+export const getUserDashboard = async (req, res, next) => {
   try {
     const userId = req.user?.id;
     const user = await User.findById(userId);
