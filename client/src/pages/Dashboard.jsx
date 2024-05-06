@@ -32,7 +32,6 @@ export default function Dashboard() {
     const token = localStorage.getItem("currentUser");
     await getDashboardDetails(token).then((res) => {
       setData(res.data);
-      console.log(res.data);
       setLoading(false);
     });
   };
@@ -42,7 +41,6 @@ export default function Dashboard() {
     const token = localStorage.getItem("currentUser");
     await getWorkouts(token, "").then((res) => {
       setTodaysWorkouts(res?.data?.todaysWorkouts);
-      console.log(res.data);
       setLoading(false);
     });
   };

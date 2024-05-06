@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import {
   WorkoutCardWrapper,
   WorkoutContainer,
@@ -12,7 +13,6 @@ import WorkoutCard from "../components/cards/WorkoutCard";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DateCalendar } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-import { useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
 import { getWorkouts } from "../api";
 import { CircularProgress } from "@mui/material";
@@ -27,7 +27,6 @@ export default function Workout() {
     const token = localStorage.getItem("currentUser");
     await getWorkouts(token, date ? `?date=${date}` : "").then((res) => {
       setTodaysWorkouts(res?.data?.todaysWorkouts);
-      console.log(res.data);
       setLoading(false);
     });
   };
