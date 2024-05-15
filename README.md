@@ -22,8 +22,3 @@ Our website is built with the following technologies:
 
 🔥MongoDB
 
-
-
-🔥Framer Motion: A motion library for React that allows for easy and customizable animations.
-
-🔥Sanity: A flexable content managment system
